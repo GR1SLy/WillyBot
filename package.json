@@ -12,11 +12,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "electron-updater": "^4.6.5",
-    "serialport": "^10.5.0",
+    "child_process": "^1.0.2",
+    "electron-updater": "^6.6.2",
     "fs": "0.0.1-security",
     "path": "^0.12.7",
-    "child_process": "^1.0.2"
+    "serialport": "^10.5.0"
   },
   "devDependencies": {
     "electron": "^22.3.0",
@@ -33,7 +33,9 @@
       "target": [
         {
           "target": "nsis",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ],
       "icon": "www/media/app.ico",
@@ -47,4 +49,4 @@
       "shortcutName": "Otto Blockly"
     }
   }
-} 
+}
