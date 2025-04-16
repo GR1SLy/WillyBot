@@ -14,7 +14,7 @@ function createWindow () {
 	if (process.platform == 'win32' && process.argv.length >= 2) {
 		mainWindow.loadURL("file://" + path.join(__dirname, '../../www/index.html?url='+process.argv[1]))
 	} else {
-		mainWindow.loadURL("file://" + path.join(__dirname, '../../www/index.html'))
+		mainWindow.loadURL("file://" + __dirname + '/www/index.html')
 	}
 	mainWindow.setMenu(null)
 	mainWindow.on('closed', function () {
