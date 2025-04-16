@@ -1,0 +1,50 @@
+{
+  "name": "otto-blockly",
+  "version": "1.0.0",
+  "description": "Otto DIY Blockly Programming Interface",
+  "main": "electronApp.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "electron-updater": "^4.6.5",
+    "serialport": "^10.5.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "child_process": "^1.0.2"
+  },
+  "devDependencies": {
+    "electron": "^22.3.0",
+    "electron-builder": "^24.6.3"
+  },
+  "build": {
+    "appId": "com.ottodiy.blockly",
+    "productName": "Otto Blockly",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "www/media/app.ico",
+      "publisherName": "Otto DIY"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Otto Blockly"
+    }
+  }
+} 
